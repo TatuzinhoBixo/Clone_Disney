@@ -22,7 +22,6 @@
         align-items: center;
         flex-wrap: wrap;
         justify-content: center;
-        
         &__item {
             display: inline-block;
 
@@ -36,6 +35,7 @@
                 }
             }
         }
+        
     }
 
     p {
@@ -46,18 +46,17 @@
 .language-selector {
     display: flex;
     align-items: center;
-
     img {
-        height: 18px;
+        image-rendering: 18px;
         width: 18px;
     }
-
+    
     select {
         background-color: transparent;
         border: none;
         color: variaveis.$corTextoPrincipal;
         height: 38px;
-
+        
         &:hover {
             color: variaveis.$corTextoSecundario;
         }
@@ -65,5 +64,6 @@
         option {
             color: variaveis.$corDeFundo;
         }
+
     }
 }

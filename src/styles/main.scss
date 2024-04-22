@@ -1,17 +1,11 @@
-@use 'variaveis';
 @use 'hero';
+@use 'variaveis';
 @use 'shows';
 @use 'plans';
-@use 'available-devices'; 
+@use 'available-devices';
 @use 'faq';
 @use 'footer';
 @use 'header';
-
-@font-face {
-    font-family: Avenir;
-    src: url(../../assets/fonts/Avenir-Regular.woff2);
-    font-weight: 400;
-}
 
 @font-face {
     font-family: Avenir;
@@ -28,23 +22,25 @@
 }
 
 body {
-    background-color: variaveis.$corDeFundo;
+    background-color: variaveis.$corDeFundo;  
 }
 
-@mixin text($fontSize: 16px) {
+@mixin text ($fontSize: 16px) {
     font-size: $fontSize;
     line-height: $fontSize + 10px;
     color: variaveis.$corTextoPrincipal;
 }
+
 
 @mixin title($fontSize: 40px) {
     @include text($fontSize);
     color: variaveis.$corTextoSecundario;
 }
 
+
 .text--big {
     @include text(18px);
-
+    
     @media (max-width: 768px) {
         @include text(15px);
     }
@@ -66,15 +62,9 @@ body {
     }
 }
 
-.link-text {
-    @include text(18px);
-    color: variaveis.$corTextoSecundario;
-    text-decoration: underline
-}
-
 .title--big {
     @include title(44px);
-
+    
     @media (max-width: 768px) {
         @include title(26px);
     }
@@ -94,7 +84,13 @@ body {
     @media (max-width: 768px) {
         @include title(22px);
     }
-} 
+}
+
+.link-text {
+    @include text (18px);
+    color: variaveis.$corTextoSecundario;
+    text-decoration: underline;
+}
 
 .button {
     display: flex;
@@ -110,10 +106,10 @@ body {
     text-decoration: none;
     padding: 8px 14px;
     letter-spacing: 1px;
-    border: 1px solid  variaveis.$corDeFundoBotaoPrimario;
+    border: 1px solid variaveis.$corDeFundoBotaoPrimario;
 
     &:hover {
-        background-color: lighten(variaveis.$corDeFundoBotaoPrimario, 3%);
+        background-color: lighten(variaveis.$corDeFundoBotaoSecundario, 3%);
     }
 
     &--secondary {
@@ -152,7 +148,7 @@ body {
 
     &__text_container {
         padding: 0 2vw;
-
+        
         h2 {
             margin-bottom: 24px;
         }

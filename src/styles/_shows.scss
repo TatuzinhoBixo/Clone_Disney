@@ -7,7 +7,7 @@
     &__list {
         margin-top: 44px;
         display: none;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr; 
         gap: 24px;
 
         @media (max-width: 768px) {
@@ -16,6 +16,10 @@
 
         &--is-active {
             display: grid;
+        }
+
+        @media (max-width: 768px) {
+            font-size: 16px;
         }
 
         &__item {
@@ -49,10 +53,6 @@
 
             &--is-active {
                 border-color: variaveis.$corTextoSecundario;
-            }
-
-            @media (max-width: 768px) {
-                font-size: 16px;
             }
         }
     }
